@@ -3,7 +3,7 @@
 A simple jQuery plugin for image zooming; as seen on [Medium](https://medium.com/designing-medium/image-zoom-on-medium-24d146fc0c20).
 
 ### Demo
-https://fat.github.io/zoom.js
+http://heavybeard.github.io/zoom.js/
 
 ### How
 
