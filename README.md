@@ -18,30 +18,30 @@ https://spinningarrow.github.io/zoom-vanilla.js
 1. Link the zoom-vanilla.js and zoom.css files to your site or application.
 
   ```html
-  <link href="css/zoom.css" rel="stylesheet">
-  <script src="dist/zoom-vanilla.min.js"></script>
+  <link href="asset/css/zoom.min.css" rel="stylesheet">
+  <script src="asset/js/zoom-vanilla.min.js"></script>
   ```
 
 2. Add a `data-action="zoom"` attribute to the images or the videos you want to make zoomable. For example:
 
   ```html
-  <img src="img/blog_post_featured.png" data-action="zoom">
+  <img src="asset/img/forest.jpg" data-action="zoom">
   ```
   
   ```html
   <picture>
     <!--[if IE 9]><video style="display: none;"><![endif]-->
-    <source srcset="img/example.webp" type="image/webp">
+    <source srcset="asset/img/city.webp" type="image/webp">
     <!--[if IE 9]></video><![endif]-->
-    <img src="img/example.jpg" data-action="zoom">
+    <img src="asset/img/city.jpg" data-action="zoom">
   </picture>
   ```
   
   ```html
   <video data-action="zoom" width="320">
-    <source src="video/example/example.webm" type="video/webm">
-    <source src="video/example/example.ogv" type="video/ogv">
-    <source src="video/example/example.mp4" type="video/mp4">
+    <source src="asset/video/storm.webm" type="video/webm">
+    <source src="asset/video/storm.ogv" type="video/ogv">
+    <source src="asset/video/storm.mp4" type="video/mp4">
   </video>
   ```
 
@@ -53,7 +53,7 @@ If you hold your meta key (`⌘` or `Ctrl`) it will open in a new tab.
 If you add the new data property `data-original="path/to/image"` it will open a different image on the new tab, for example the full size image.
 
 ```html
-<img src="img/blog_post_featured.png" data-action="zoom" data-original="img/blog_post_featured_full.png">
+<img src="asset/img/city.jpg" data-action="zoom" data-original="asset/img/city.jpg">
 ```
 
 ### Where
