@@ -1,0 +1,91 @@
+//
+// ZOOM
+// Require style for zoom script
+//
+// - modules
+// - patterns
+// - components
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+
+
+//
+// MODULES
+// ---------------------------------------------------------------------------
+$data-attribute: data-zoom;
+$overlay-background: #fff;
+
+@mixin cursor-zoom($where: in) { //in or out
+    cursor: pointer; //IE fallback @see http://caniuse.com/#feat=css3-cursors-newer
+    cursor: -webkit-zoom-#{$where}; // No lint reported
+    cursor: -moz-zoom-#{$where}; // No lint reported
+    cursor: zoom-#{$where}; // No lint reported
+}
+
+@mixin transition($what: all, $duration: 300ms) {
+    -webkit-transition: $what $duration; // No lint reported
+    -moz-transition: $what $duration; // No lint reported
+    -o-transition: $what $duration; // No lint reported
+    transition: $what $duration;
+}
+
+@mixin opacity($how: 1) {
+    filter: 'alpha(opacity=#{$how})';
+    opacity: $how;
+}
+
+@mixin backface-visibility($value: hidden) {
+    -webkit-backface-visibility: $value; // No lint reported
+    backface-visibility: $value;
+}
+
+%zoom-media {
+    @include transition(all, 300ms);
+    position: relative;
+    z-index: 99999;
+}
+
+//
+// PATTERNS
+// ---------------------------------------------------------------------------
+[#{$data-attribute}='zoom'] {
+    @include cursor-zoom(in);
+}
+
+
+//
+// COMPONENTS
+// ---------------------------------------------------------------------------
+.zoom {
+    &-media {
+        @extend %zoom-media;
+        @include cursor-zoom(out);
+        &-wrap {
+            @extend %zoom-media;
+            @include backface-visibility(hidden);
+            will-change: transform;
+        }
+
+        &-loading {
+            cursor: wait;
+        }
+    }
+
+    &-overlay {
+        @include transition(opacity, 300ms);
+        @include opacity(0);
+        @include cursor-zoom(out);
+        z-index: 9990;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        //pointer-events: none;
+        background: $overlay-background;
+
+        .zoom-overlay-open & { //zoom-overlay-open class is assigned to body
+            @include opacity(1);
+        }
+    }
+}

@@ -1,0 +1,62 @@
+//
+// DEMO
+// Custom style for demo page
+//
+// - modules
+// - patterns
+// - components
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+
+
+//
+// MODULES
+// ---------------------------------------------------------------------------
+@mixin min-width($break-width: 750px) {
+    @media (min-width: $break-width) {
+        @content;
+    }
+}
+
+
+//
+// PATTERNS
+// ---------------------------------------------------------------------------
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+
+    @include min-width() {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+.container {
+    margin: 50px;
+    max-width: 700px;
+
+    @include min-width() {
+        margin: 100px auto;
+    }
+}
+
+//
+// COMPONENTS
+// ---------------------------------------------------------------------------
+img {
+    width: 100%;
+}
+
+.pull-left {
+    width: 55%;
+    float: left;
+    margin: 20px 20px 20px -80px;
+}
+
+.pull-right {
+    width: 55%;
+    float: right;
+    margin: 20px -80px 20px 20px;
+}

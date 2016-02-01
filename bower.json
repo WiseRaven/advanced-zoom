@@ -1,0 +1,31 @@
+{
+  "name": "zoom-vanilla.js",
+  "version": "0.0.1",
+  "description": "Best way to zoom an image or a video",
+  "main": [
+    "dist/asset/js/zoom-vanilla.min.js",
+    "dist/asset/css/zoom-vanilla.min.css"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "zoom",
+    "vanilla",
+    "vanilla-js",
+    "image",
+    "video"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "homepage": "http://spinningarrow.github.io/zoom-vanilla.js/",
+  "private": true,
+  "ignore": [
+    "/.*",
+    "node_modules",
+    "bower_components",
+    "source",
+    "dist/index.html",
+    "dist/asset/img",
+    "dist/asset/video"
+  ]
+}

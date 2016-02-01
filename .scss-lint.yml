@@ -1,0 +1,12 @@
+exclude: '*/vendor/*'
+
+linters:
+  BorderZero:
+    enabled: false
+
+  Indentation:
+    severity: warning
+    width: 4
+
+  PropertySortOrder:
+    enabled: false

@@ -1,28 +1,62 @@
 {
-  "name": "zoom.js",
-  "version": "0.0.3",
-  "description": "It's the best way to zoom an image",
-  "main": "js/zoom.js",
+  "name": "zoom-vanilla.js",
+  "version": "0.0.1",
+  "description": "Best way to zoom an image or a video",
+  "main": [
+    "dist/asset/js/zoom-vanilla.min.js",
+    "dist/asset/css/zoom-vanilla.min.css"
+  ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:fat/zoom.js.git"
+    "url": "https://github.com/spinningarrow/zoom-vanilla.js.git"
   },
   "keywords": [
     "zoom",
-    "jquery",
-    "image"
+    "vanilla",
+    "vanilla-js",
+    "image",
+    "video"
   ],
   "author": "fat <jacobthornton@gmail.com>",
+  "contributors": [
+    {
+      "name": "spinningarrow",
+      "email": "sahil29@gmail.com"
+    },
+    {
+      "name": "heavybeard",
+      "email": "info@heavybeard.it"
+    },
+    {
+      "name": "daxhns",
+      "email": ""
+    },
+    {
+      "name": "sunstorymvp",
+      "email": "semisation@gmail.com"
+    },
+    {
+      "name": "liyaodong",
+      "email": "mail@liyaodong.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fat/zoom.js/issues"
+    "url": "https://github.com/spinningarrow/zoom-vanilla.js/issues"
   },
-  "homepage": "https://github.com/fat/zoom.js",
+  "homepage": "https://github.com/spinningarrow/zoom-vanilla.js",
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-file-insert": "^1.0.2",
-    "gulp-header": "^1.2.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.1.0"
+    "node-sass": "^3.4.2",
+    "nodemon": "^1.8.1",
+    "uglify-js": "^2.4.21"
+  },
+  "scripts": {
+    "compress-js": "uglifyjs --mangle --preamble=\"// $npm_package_name - $npm_package_version ($npm_package_homepage)\" source/script/zoom-vanilla.js > dist/asset/js/zoom-vanilla.min.js",
+    "compile-sass": "node-sass --output-style compressed --include-path scss source/style/zoom.scss dist/asset/css/zoom.min.css && node-sass --output-style compressed --include-path scss source/style/demo.scss dist/asset/css/demo.min.css",
+    "watch-compile-sass": "nodemon -e scss --watch source/style -x \"npm run compile-sass\"",
+    "watch-compress-js": "nodemon -e js --watch source/script -x \"npm run compress-js\"",
+    "clean": "rm -rf dist/asset/js/* && rm -rf dist/asset/css/*",
+    "watch": "npm run watch-compress-js && npm run watch-compile-sass",
+    "build": "npm run clean && npm run compress-js && npm run compile-sass"
   }
 }
