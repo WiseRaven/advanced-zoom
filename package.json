@@ -8,7 +8,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/spinningarrow/zoom-vanilla.js.git"
+    "url": "https://github.com/heavybeard/zoom-vanilla.js.git"
   },
   "keywords": [
     "zoom",
@@ -42,9 +42,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/spinningarrow/zoom-vanilla.js/issues"
+    "url": "https://github.com/heavybeard/zoom-vanilla.js/issues"
   },
-  "homepage": "https://github.com/spinningarrow/zoom-vanilla.js",
+  "homepage": "https://github.com/heavybeard/zoom-vanilla.js",
   "devDependencies": {
     "node-sass": "^3.4.2",
     "nodemon": "^1.8.1",
