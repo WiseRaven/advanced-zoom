@@ -18,27 +18,17 @@
     /**
      * OFFSET
      * @description Find the position of the element
-     * @see http://www.quirksmode.org/js/findpos.html
+     * @see http://youmightnotneedjquery.com/#offset
      * @param DOM element The element
      * @return object offset The real position top and left
      */
     function realOffset(element) {
-        var offset = {
-            top: 0,
-            left: 0
+        var rect = element.getBoundingClientRect();
+
+        return {
+            top: rect.top + document.body.scrollTop,
+            left: rect.left + document.body.scrollLeft
         };
-
-        /** return if element has no parent */
-        if (!element.offsetParent)
-            return offset;
-
-        do {
-            offset.left += element.offsetLeft;
-            offset.top += element.offsetTop;
-            /** This is not an error, but a tricky */
-        } while (element = element.offsetParent); // jshint ignore:line
-
-        return offset;
     }
 
 

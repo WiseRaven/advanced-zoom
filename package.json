@@ -1,6 +1,6 @@
 {
   "name": "zoom-vanilla.js",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Best way to zoom an image or a video",
   "main": [
     "dist/asset/js/zoom-vanilla.min.js",
@@ -38,20 +38,24 @@
     {
       "name": "liyaodong",
       "email": "mail@liyaodong.com"
+    },
+    {
+      "name": "ElegantSudo",
+      "email": ""
     }
   ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/heavybeard/zoom-vanilla.js/issues"
   },
-  "homepage": "https://github.com/heavybeard/zoom-vanilla.js",
+  "homepage": "http://heavybeard.github.io/zoom-vanilla.js/dist/",
   "devDependencies": {
     "node-sass": "^3.4.2",
     "nodemon": "^1.8.1",
     "uglify-js": "^2.4.21"
   },
   "scripts": {
-    "compress-js": "uglifyjs --mangle --preamble=\"// $npm_package_name - $npm_package_version ($npm_package_homepage)\" source/script/zoom-vanilla.js > dist/asset/js/zoom-vanilla.min.js",
+    "compress-js": "uglifyjs --mangle --preamble=\"// zoom-vanilla - 1.0.0 (http://heavybeard.github.io/zoom-vanilla.js/dist/)\" source/script/zoom-vanilla.js > dist/asset/js/zoom-vanilla.min.js",
     "compile-sass": "node-sass --output-style compressed --include-path scss source/style/zoom.scss dist/asset/css/zoom.min.css && node-sass --output-style compressed --include-path scss source/style/demo.scss dist/asset/css/demo.min.css",
     "watch-compile-sass": "nodemon -e scss --watch source/style -x \"npm run compile-sass\"",
     "watch-compress-js": "nodemon -e js --watch source/script -x \"npm run compress-js\"",
