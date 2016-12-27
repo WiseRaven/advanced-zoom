@@ -1,29 +1,32 @@
 {
-  "name": "zoom-vanilla.js",
-  "version": "0.0.1",
-  "description": "Best way to zoom an image or a video",
+  "name": "advanced-zoom",
+  "version": "1.0.0",
+  "description": "Zoom on img, picture and video source like Medium",
   "main": [
-    "dist/asset/js/zoom-vanilla.min.js",
-    "dist/asset/css/zoom-vanilla.min.css"
+    "dist/asset/js/advanced-zoom.js",
+    "dist/asset/css/advanced-zoom.css"
   ],
   "license": "MIT",
   "keywords": [
-    "zoom",
+   "zoom",
     "vanilla",
-    "vanilla-js",
+    "media zoom",
     "image",
-    "video"
+    "video",
+    "advanced-zoom",
+    "medium",
+    "medium zoom image",
+    "video zoom",
+    "picture"
   ],
   "moduleType": [
     "globals"
   ],
-  "homepage": "http://spinningarrow.github.io/zoom-vanilla.js/",
+  "homepage": "http://heavybeard.github.io/advanced-zoom/dist/",
   "private": true,
   "ignore": [
-    "/.*",
     "node_modules",
     "bower_components",
-    "source",
     "dist/index.html",
     "dist/asset/img",
     "dist/asset/video"

@@ -1,31 +1,36 @@
 {
-  "name": "zoom-vanilla.js",
+  "name": "advanced-zoom",
   "version": "1.0.0",
-  "description": "Best way to zoom an image or a video",
+  "description": "Zoom on img, picture and video source like Medium",
   "main": [
-    "dist/asset/js/zoom-vanilla.min.js",
-    "dist/asset/css/zoom-vanilla.min.css"
+    "dist/asset/js/advanced-zoom.min.js",
+    "dist/asset/css/advanced-zoom.min.css"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/heavybeard/zoom-vanilla.js.git"
+    "url": "https://github.com/heavybeard/advanced-zoom.git"
   },
   "keywords": [
     "zoom",
     "vanilla",
     "vanilla-js",
     "image",
-    "video"
+    "video",
+    "advanced-zoom",
+    "medium",
+    "medium zoom image",
+    "video zoom",
+    "picture"
   ],
-  "author": "fat <jacobthornton@gmail.com>",
+  "author": "heavybeard <info@heavybeard.it>",
   "contributors": [
+    {
+      "name": "fat",
+      "email": "jacobthornton@gmail.com"
+    },
     {
       "name": "spinningarrow",
       "email": "sahil29@gmail.com"
-    },
-    {
-      "name": "heavybeard",
-      "email": "info@heavybeard.it"
     },
     {
       "name": "daxhns",
@@ -46,21 +51,23 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/heavybeard/zoom-vanilla.js/issues"
+    "url": "https://github.com/heavybeard/advanced-zoom/issues"
   },
-  "homepage": "http://heavybeard.github.io/zoom-vanilla.js/dist/",
+  "homepage": "http://heavybeard.github.io/advanced-zoom/dist/",
   "devDependencies": {
     "node-sass": "^3.4.2",
     "nodemon": "^1.8.1",
     "uglify-js": "^2.4.21"
   },
   "scripts": {
-    "compress-js": "uglifyjs --mangle --preamble=\"// zoom-vanilla - 1.0.0 (http://heavybeard.github.io/zoom-vanilla.js/dist/)\" source/script/zoom-vanilla.js > dist/asset/js/zoom-vanilla.min.js",
-    "compile-sass": "node-sass --output-style compressed --include-path scss source/style/zoom.scss dist/asset/css/zoom.min.css && node-sass --output-style compressed --include-path scss source/style/demo.scss dist/asset/css/demo.min.css",
+    "compress-js": "uglifyjs --mangle --preamble=\"// advanced-zoom - 1.0.0 (http://heavybeard.github.io/advanced-zoom/dist/)\" source/script/advanced-zoom.js > dist/asset/js/advanced-zoom.min.js",
+    "beautify-js": "uglifyjs --beautify --preamble=\"// advanced-zoom - 1.0.0 (http://heavybeard.github.io/advanced-zoom/dist/)\" source/script/advanced-zoom.js > dist/asset/js/advanced-zoom.js", 
+    "compile-sass": "node-sass --output-style compressed --include-path scss source/style/advanced-zoom.scss dist/asset/css/adavanced-zoom.min.css && node-sass --output-style compressed --include-path scss source/style/demo.scss dist/asset/css/demo.min.css",
+    "beautify-sass": "node-sass --output-style expanded --include-path scss source/style/advanced-zoom.scss dist/asset/css/adavanced-zoom.css",
     "watch-compile-sass": "nodemon -e scss --watch source/style -x \"npm run compile-sass\"",
     "watch-compress-js": "nodemon -e js --watch source/script -x \"npm run compress-js\"",
     "clean": "rm -rf dist/asset/js/* && rm -rf dist/asset/css/*",
     "watch": "npm run watch-compress-js && npm run watch-compile-sass",
-    "build": "npm run clean && npm run compress-js && npm run compile-sass"
+    "build": "npm run clean && npm run compress-js && npm run beautify-js && npm run compile-sass && npm run beautify-sass"
   }
 }

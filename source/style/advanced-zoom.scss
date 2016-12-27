@@ -1,6 +1,6 @@
 //
-// ZOOM
-// Require style for zoom script
+// ADVANCED ZOOM
+// Require style for advanced-zoom script
 //
 // - modules
 // - patterns
@@ -17,15 +17,17 @@ $overlay-background: #fff;
 
 @mixin cursor-zoom($where: in) { //in or out
     cursor: pointer; //IE fallback @see http://caniuse.com/#feat=css3-cursors-newer
-    cursor: -webkit-zoom-#{$where}; // No lint reported
-    cursor: -moz-zoom-#{$where}; // No lint reported
-    cursor: zoom-#{$where}; // No lint reported
+    /// scss-lint:disable DuplicateProperty
+    cursor: -webkit-zoom-#{$where};
+    cursor: -moz-zoom-#{$where};
+    cursor: zoom-#{$where};
 }
 
 @mixin transition($what: all, $duration: 300ms) {
-    -webkit-transition: $what $duration; // No lint reported
-    -moz-transition: $what $duration; // No lint reported
-    -o-transition: $what $duration; // No lint reported
+    /// scss-lint:disable VendorPrefix
+    -webkit-transition: $what $duration;
+    -moz-transition: $what $duration;
+    -o-transition: $what $duration;
     transition: $what $duration;
 }
 
@@ -35,7 +37,8 @@ $overlay-background: #fff;
 }
 
 @mixin backface-visibility($value: hidden) {
-    -webkit-backface-visibility: $value; // No lint reported
+    ///scss-lint:disable VendorPrefix
+    -webkit-backface-visibility: $value;
     backface-visibility: $value;
 }
 

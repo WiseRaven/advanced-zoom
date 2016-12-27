@@ -2,8 +2,7 @@
 # The humans responsible & technology colophon
 
 # TEAM
-
-    Sahil Bajaj     -- Web Developer -- 
+ 
     Andrea Cognini  -- Web Developer -- @Heavybeard
 
 # TECHNOLOGY COLOPHON
