@@ -11,7 +11,7 @@ I added new feature for `video` and `picture` zooming that works like the image 
 Looking for demo and try all supports
 
 ### Demo
-http://heavybeard.github.io/advanced-zoom/dist/
+[http://heavybeard.github.io/advanced-zoom/dist/](http://heavybeard.github.io/advanced-zoom/dist/)
 
 ### How
 
@@ -62,7 +62,7 @@ advanced-zoom.js should (in theory) work in all modern browsers, in IE9 too. If 
 
 ### Who
 
-This version by [@heavybeard][], forked originally from [@spinningarrow][].
+This version by [@heavybeard][], forked originally from [@spinningarrow](https://github.com/spinningarrow/zoom-vanilla.js).
 
 Originally written by <a href="//twitter.com/fat">@fat</a>
 
