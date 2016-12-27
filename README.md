@@ -11,7 +11,7 @@ upstream changes (if any) becomes easier.
 I added new feature for video zooming that works like the image zooming.
 
 ### Demo
-https://spinningarrow.github.io/zoom-vanilla.js
+http://heavybeard.github.io/advanced-zoom/dist/
 
 ### How
 
