@@ -15,14 +15,14 @@ http://heavybeard.github.io/advanced-zoom/dist/
 
 ### How
 
-1. Link the advanced-zoom.js and advanced-zoom.css files to your site or application.
+1 - Link the advanced-zoom.js and advanced-zoom.css files to your site or application.
 
 ```html
 <link href="asset/css/advanced-zoom.min.css" rel="stylesheet">
 <script src="asset/js/advanced-zoom.min.js"></script>
 ```
 
-2. Add a `data-zoom="zoom"` attribute to the images or the videos you want to make zoomable. For example:
+2 - Add a `data-zoom="zoom"` attribute to the images or the videos you want to make zoomable. For example:
 
 ```html
 <img src="asset/img/forest.jpg" data-zoom="zoom">
