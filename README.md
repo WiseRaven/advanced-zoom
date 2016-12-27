@@ -17,33 +17,33 @@ http://heavybeard.github.io/advanced-zoom/dist/
 
 1. Link the advanced-zoom.js and advanced-zoom.css files to your site or application.
 
-  ```html
-  <link href="asset/css/advanced-zoom.min.css" rel="stylesheet">
-  <script src="asset/js/advanced-zoom.min.js"></script>
-  ```
+```html
+<link href="asset/css/advanced-zoom.min.css" rel="stylesheet">
+<script src="asset/js/advanced-zoom.min.js"></script>
+```
 
 2. Add a `data-zoom="zoom"` attribute to the images or the videos you want to make zoomable. For example:
 
-  ```html
-  <img src="asset/img/forest.jpg" data-zoom="zoom">
-  ```
-  
-  ```html
-  <picture>
-    <!--[if IE 9]><video style="display: none;"><![endif]-->
-    <source srcset="asset/img/city.webp" type="image/webp">
-    <!--[if IE 9]></video><![endif]-->
-    <img src="asset/img/city.jpg" data-zoom="zoom">
-  </picture>
-  ```
-  
-  ```html
-  <video data-zoom="zoom" width="320">
-    <source src="asset/video/storm.webm" type="video/webm">
-    <source src="asset/video/storm.ogv" type="video/ogv">
-    <source src="asset/video/storm.mp4" type="video/mp4">
-  </video>
-  ```
+```html
+<img src="asset/img/forest.jpg" data-zoom="zoom">
+```
+
+```html
+<picture>
+  <!--[if IE 9]><video style="display: none;"><![endif]-->
+  <source srcset="asset/img/city.webp" type="image/webp">
+  <!--[if IE 9]></video><![endif]-->
+  <img src="asset/img/city.jpg" data-zoom="zoom">
+</picture>
+```
+
+```html
+<video data-zoom="zoom" width="320">
+  <source src="asset/video/storm.webm" type="video/webm">
+  <source src="asset/video/storm.ogv" type="video/ogv">
+  <source src="asset/video/storm.mp4" type="video/mp4">
+</video>
+```
 
 ### Why
 
