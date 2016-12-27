@@ -23,7 +23,7 @@
     "globals"
   ],
   "homepage": "http://heavybeard.github.io/advanced-zoom/dist/",
-  "private": true,
+  "private": false,
   "ignore": [
     "node_modules",
     "bower_components",
