@@ -62,8 +62,8 @@
   "scripts": {
     "compress-js": "uglifyjs --mangle --preamble=\"// advanced-zoom - 1.0.0 (http://heavybeard.github.io/advanced-zoom/dist/)\" source/script/advanced-zoom.js > dist/asset/js/advanced-zoom.min.js",
     "beautify-js": "uglifyjs --beautify --preamble=\"// advanced-zoom - 1.0.0 (http://heavybeard.github.io/advanced-zoom/dist/)\" source/script/advanced-zoom.js > dist/asset/js/advanced-zoom.js", 
-    "compile-sass": "node-sass --output-style compressed --include-path scss source/style/advanced-zoom.scss dist/asset/css/adavanced-zoom.min.css && node-sass --output-style compressed --include-path scss source/style/demo.scss dist/asset/css/demo.min.css",
-    "beautify-sass": "node-sass --output-style expanded --include-path scss source/style/advanced-zoom.scss dist/asset/css/adavanced-zoom.css",
+    "compile-sass": "node-sass --output-style compressed --include-path scss source/style/advanced-zoom.scss dist/asset/css/advanced-zoom.min.css && node-sass --output-style compressed --include-path scss source/style/demo.scss dist/asset/css/demo.min.css",
+    "beautify-sass": "node-sass --output-style expanded --include-path scss source/style/advanced-zoom.scss dist/asset/css/advanced-zoom.css",
     "watch-compile-sass": "nodemon -e scss --watch source/style -x \"npm run compile-sass\"",
     "watch-compress-js": "nodemon -e js --watch source/script -x \"npm run compress-js\"",
     "clean": "rm -rf dist/asset/js/* && rm -rf dist/asset/css/*",
