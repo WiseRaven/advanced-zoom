@@ -116,6 +116,7 @@
         this._document.addEventListener('click', clickHandlerFn);
         this._document.addEventListener('keyup', keyHandlerFn);
         this._document.addEventListener('touchstart', touchStartFn);
+        this._document.addEventListener('touchend', clickHandlerFn);
 
         e.stopPropagation();
     };
