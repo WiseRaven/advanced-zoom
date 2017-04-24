@@ -5,8 +5,8 @@
     function realOffset(element) {
         var rect = element.getBoundingClientRect();
         return {
-            top: rect.top + document.body.scrollTop,
-            left: rect.left + document.body.scrollLeft
+            top: rect.top + window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0,
+            left: rect.left + window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0
         };
     }
     function setTransformStyle(element, styleValue) {
@@ -60,8 +60,8 @@
     };
     AdvancedZoomService.prototype._scrollHandler = function(e) {
         var deltaY;
-        if (this._initialScrollPosition === null) this._initialScrollPosition = window.scrollY;
-        deltaY = this._initialScrollPosition - window.scrollY;
+        if (this._initialScrollPosition === null) this._initialScrollPosition = window.pageYOffset;
+        deltaY = this._initialScrollPosition - window.pageYOffset;
         if (Math.abs(deltaY) >= 40) this._activeAdvancedZoomClose();
     };
     AdvancedZoomService.prototype._keyHandler = function(e) {
@@ -138,7 +138,7 @@
         this._targetMedia.offsetWidth;
         var originalFullMediaWidth = this._fullWidth;
         var originalFullMediaHeight = this._fullHeight;
-        var scrollTop = window.scrollY;
+        var scrollTop = window.pageYOffset;
         var maxScaleFactor = originalFullMediaWidth / (this._targetMedia.width || this._targetMedia.videoWidth);
         var viewportHeight = window.innerHeight - AdvancedZoom.OFFSET;
         var viewportWidth = window.innerWidth - AdvancedZoom.OFFSET;
@@ -148,7 +148,7 @@
     };
     AdvancedZoom.prototype._triggerAnimation = function() {
         this._targetMedia.offsetWidth;
-        var mediaOffset = realOffset(this._targetMedia), scrollTop = window.scrollY;
+        var mediaOffset = realOffset(this._targetMedia), scrollTop = window.pageYOffset;
         var viewportY = scrollTop + window.innerHeight / 2, viewportX = window.innerWidth / 2, mediaCenterY = mediaOffset.top + (this._targetMedia.height || this._targetMedia.offsetHeight) / 2, mediaCenterX = mediaOffset.left + (this._targetMedia.width || this._targetMedia.offsetWidth) / 2;
         this._translateY = Math.round(viewportY - mediaCenterY);
         this._translateX = Math.round(viewportX - mediaCenterX);
