@@ -1,6 +1,6 @@
 {
   "name": "advanced-zoom",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "Zoom on img, picture and video source like Medium",
   "main": [
     "dist/asset/js/advanced-zoom.min.js",
@@ -67,7 +67,7 @@
     "beautify-sass": "node-sass --output-style expanded --include-path scss source/style/advanced-zoom.scss dist/asset/css/advanced-zoom.css",
     "watch-compile-sass": "nodemon -e scss --watch source/style -x \"npm run compile-sass\"",
     "watch-compress-js": "nodemon -e js --watch source/script -x \"npm run compress-js\"",
-    "serve": "http-server & open http://127.0.0.1:8080/dist",
+    "serve": "http-server",
     "clean": "rm -rf dist/asset/js/* && rm -rf dist/asset/css/*",
     "watch": "npm run watch-compress-js && npm run watch-compile-sass",
     "build": "npm run clean && npm run compress-js && npm run beautify-js && npm run compile-sass && npm run beautify-sass"
