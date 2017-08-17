@@ -1,6 +1,6 @@
 {
   "name": "advanced-zoom",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Zoom on img, picture and video source like Medium",
   "main": [
     "dist/asset/js/advanced-zoom.min.js",
