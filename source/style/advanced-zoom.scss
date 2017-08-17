@@ -15,8 +15,10 @@
 $data-attribute: data-zoom;
 $overlay-background: #fff;
 
-@mixin cursor-zoom($where: in) { //in or out
-    cursor: pointer; //IE fallback @see http://caniuse.com/#feat=css3-cursors-newer
+// in or out
+@mixin cursor-zoom($where: in) {
+    // IE fallback @see http://caniuse.com/#feat=css3-cursors-newer
+    cursor: pointer;
     /// scss-lint:disable DuplicateProperty
     cursor: -webkit-zoom-#{$where};
     cursor: -moz-zoom-#{$where};
@@ -37,7 +39,7 @@ $overlay-background: #fff;
 }
 
 @mixin backface-visibility($value: hidden) {
-    ///scss-lint:disable VendorPrefix
+    /// scss-lint:disable VendorPrefix
     -webkit-backface-visibility: $value;
     backface-visibility: $value;
 }
@@ -47,6 +49,14 @@ $overlay-background: #fff;
     position: relative;
     z-index: 99999;
 }
+
+%reducing-image-blur {
+    /// scss-lint:disable VendorPrefix
+    cursor: default;
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
 
 //
 // PATTERNS
@@ -84,11 +94,20 @@ $overlay-background: #fff;
         left: 0;
         right: 0;
         bottom: 0;
-        //pointer-events: none;
+        // pointer-events: none;
         background: $overlay-background;
 
-        .zoom-overlay-open & { //zoom-overlay-open class is assigned to body
+        // zoom-overlay-open class is assigned to body
+        .zoom-overlay-open & {
             @include opacity(1);
+        }
+
+        &-open {
+            @extend %reducing-image-blur;
+        }
+
+        &-transitioning {
+            @extend %reducing-image-blur;
         }
     }
 }

@@ -1,4 +1,4 @@
-// advanced-zoom - 1.0.1 (http://heavybeard.github.io/advanced-zoom/dist/)
+// advanced-zoom - 1.2.0 (http://heavybeard.github.io/advanced-zoom/dist/)
 +function() {
     "use strict";
     var scrollHandlerFn, clickHandlerFn, keyHandlerFn, touchStartFn, touchMoveFn;

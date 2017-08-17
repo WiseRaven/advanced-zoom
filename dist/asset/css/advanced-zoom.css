@@ -7,6 +7,12 @@
   z-index: 99999;
 }
 
+.zoom-overlay-open, .zoom-overlay-transitioning {
+  cursor: default;
+  image-rendering: -webkit-optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
 [data-zoom='zoom'] {
   cursor: pointer;
   cursor: -webkit-zoom-in;
