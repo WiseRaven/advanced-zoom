@@ -2,10 +2,8 @@
   "name": "advanced-zoom",
   "version": "1.2.1",
   "description": "Zoom on img, picture and video source like Medium",
-  "main": [
-    "dist/asset/js/advanced-zoom.min.js",
-    "dist/asset/css/advanced-zoom.min.css"
-  ],
+  "main": "dist/asset/js/advanced-zoom.js",
+  "style": "dist/asset/css/advanced-zoom.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/heavybeard/advanced-zoom.git"
@@ -46,6 +44,10 @@
     },
     {
       "name": "ElegantSudo",
+      "email": ""
+    },
+    {
+      "name": "markaharper",
       "email": ""
     }
   ],
