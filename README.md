@@ -4,6 +4,10 @@
 bower install advanced-zoom --save
 ```
 
+```shell
+npm install advanced-zoom --save
+```
+
 A simple library for image zooming; as seen on
 [Medium](https://medium.com/designing-medium/image-zoom-on-medium-24d146fc0c20).
 
